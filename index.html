@@ -96,8 +96,36 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p> Are your eyes watery or itchy? </p>    
+        <p> Are your eyes watery or itchy? </p>   
+	<a href="#two”  onclick="allergyAdd();” class="w3-btn w3-black"> Yes</a>
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	 </div><!-- /content -->
+
     	</div>
+	
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 2;
+}
+</style>
+	
+	
 </div>
 
 <div class="page" id="two">
