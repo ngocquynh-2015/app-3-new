@@ -50,6 +50,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		alert(cold_count);
         }
+	function getresults(){ //function to calculate results//
+	var allergypercent = allergy_count/4*100;
+        var coldpercent = cold_count/4*100;
+	var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent
+	}
 
   </script>
 
@@ -136,14 +142,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p> <!-- question 4 header --> 
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button supports allergy --> 
-	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!-- no button supports for cold --> 
+	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button supports allergy and goes to results page --> 
+	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!-- no button supports for cold and goes to results page--> 
 	
 </div><!-- end of question 4 -->
 
+<div class="page" id="results"> <!-- results page -->
+<div class="w3-container w3-flat-carrot">
+	<h1>Results</h1> <!-- results header -->
+	<a onclick="getresults();" class="w3-btn w3-black"> Get Results! </a> <!-- button for results -->
+	<p id="results"></p>
 	
-
-
+</div> <!-- end of results page -->
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
