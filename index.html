@@ -36,25 +36,37 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var orange_count = 0;
+        var gold_count = 0;
+	var blue_count = 0;
+	var green_count = 0;
 
 
-        function allergyAdd(){ //fucntion to count allergy//
-            allergy_count = allergy_count + 1;
+        function orangeAdd(){ //fucntion to count Orange//
+            orange_count = orange_count + 1;
 
         }
 
-        function coldAdd(){ //function to count cold//
-            cold_count = cold_count + 1;
+        function goldAdd(){ //function to count Gold//
+            Gold_count = Gold_count + 1;
 	
         }
+	
+	function blueAdd(){ //fucntion to count Blue//
+            blue_count = blue_count + 1;
+	
+	}
+	
+	function greenAdd(){ //fucntion to count Green//
+            green_count = green_count + 1;
 	
 	function resultscalculator(){ //function for the results page
 	var resultText = document.getElementById("resultspage"); //variable for the results
-	var allergyPercent = (allergy_count / (allergy_count + cold_count)) * 100; //equation for allergy probability
-	var coldPercent = (cold_count / (cold_count + allergy_count)) * 100; //equation for cold probability 
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; //results output as percentages
+	var orangePercent = (orange_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Orange probability
+	var goldPercent = (gold_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Gold probability 
+	var bluePercent = (blue_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Blue probability
+	var greenPercent = (green_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Green probability
+	resultText.innerHTML = "Probability you are Orange =" + orangePercent + "%" + "<br> Probability you are Gold =" + goldPercent + "%" + "<br> Probability you are Blue =" + bluePercent + "%" + "<br> Probability you are Green =" + greenPercent + "%"; //results output as percentages
 	}
 
   </script>
