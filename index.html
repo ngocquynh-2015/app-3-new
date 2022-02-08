@@ -2,7 +2,7 @@
 <html> 
 <!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
  
-THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF PERSONALITY TYPES.
  
  
 Authors in chronological order of contribution:
@@ -40,6 +40,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var gold_count = 0;
 	var blue_count = 0;
 	var green_count = 0;
+	var orangePercent = 0;
+	var goldPercent = 0;
+	var bluePercent = 0;
+	var greenPercent = 0;
 
 
         function orangeAdd(){ //fucntion to count Orange//
@@ -66,7 +70,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var goldPercent = (gold_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Gold probability 
 	var bluePercent = (blue_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Blue probability
 	var greenPercent = (green_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Green probability
-	resultText.innerHTML = "Probability you are Orange =" + orangePercent + "%" + "<br> Probability you are Gold =" + goldPercent + "%" + "<br> Probability you are Blue =" + bluePercent + "%" + "<br> Probability you are Green =" + greenPercent + "%"; //results output as percentages
+	resultText.innerHTML = "Probability you are Orange =" + orangePercent + "<br> Probability you are Gold =" + goldPercent + "<br> Probability you are Blue =" + bluePercent + "<br> Probability you are Green =" + greenPercent;
 	}
 
   </script>
@@ -96,85 +100,125 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-verdana">
-	<h1>What is your true color ?</h1>
+<div id="header" class="w3-container w3-black"> 
+	<h1>What is your true color ?</h1>  <!--header for page 1--!>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Ever wondered what your true color was ? Answer a few short questions to find out!</p>
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- button on first page that leads to questions -->
+	<a href="#one" class="w3-button w3-indigo w3-round-xlarge"> Get Started </a> <!-- button on first page that leads to questions -->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!-- extra information on first page -->
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF PERSONALITY TYPE.</p> <!-- extra information on first page -->
 	</div>
 
-<div class="page" id="one">  <!-- start of question 1 -->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1> Question 1</h1> <!--question 1 title -->
+<div class="page" id="one">  <!-- start of question 1 or page 2 -->
+	<div id="header" class="w3-container w3-black">
+		<h1> Question 1</h1> <!-- question 1 title -->
 		
 	</div> <!-- start of question 1 content -->
 	
     	<div id="content" class="w3-container">
-        <p> Are your eyes watery or itchy?</p> <!-- header for question 1 -->  
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>  <!-- yes button counts for allergy --> 
-	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>  <!-- no button counts for cold --> 
+        <p> Which best describes you? Choose one : Spontaneous, Planned/Neat, Compassionate, Quiet</p> <!-- header for question 1 -->  
+	<a href="#two"  onclick="orangeAdd();" class="w3-button w3-carrot w3-round-xlarge">Spontaneous</a>  <!-- Spontaneous button counts for orange --> 
+	<a href="#two"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Planned/Neat</a>  <!-- planned/neat button counts for gold --> 
+	<a href="#two"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Compassionate</a>  <!-- compassionate button counts for blue --> 
+	<a href="#two"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Quiet</a>  <!-- quiet button counts for green --> 
 	
 </div><!-- end of question 1 -->
 	
 <div class="page" id="two"> <!-- question 2 title --> 
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-black">
 		<h1>Question 2</h1> <!--question 2 title -->
 	</div> <!-- start of question 2 content --> 
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p> <!-- question 2 header --> 
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> <!-- yes button count for cold --> 
-	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!-- no button count for allergy --> 
+		<p>Which is most like you? Choose one: Conceptual, Feelings/Caring, Orderly/On-time, Fun/Competitive</p> <!-- question 2 header --> 
+	<a href="#three"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Conceptual</a>  <!-- conceptual button counts for green --> 
+	<a href="#three"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Feelings/Caring</a>  <!-- feelings/caring button counts for blue --> 
+	<a href="#three"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Orderly/On-time</a>  <!-- orderly/on-time button counts for gold --> 
+	<a href="#three"  onclick="orangeAdd();" class="w3-button w3-carrot w3-round-xlarge">Fun/Competitive</a>  <!-- fun/competitive button counts for orange --> 
 	
 </div><!-- end of question 2 -->
 	
 <div class="page" id="three"> <!-- start of question 3 -->
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-black">
 		<h1> Question 3 </h1> <!--question 3 title -->
 	</div> <!-- start of question 3 content -->
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p> <!-- question 3 header --> 
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button counts for cold --> 
-	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!-- no button counts for allergy --> 
+		<p>Do you think of yourself as...?</p> <!-- question 3 header --> 
+	<a href="#four"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Theoretical</a>  <!-- button counts for green --> 
+	<a href="#four"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Kind/Warm</a>  <!-- button counts for blue --> 
+	<a href="#four"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Loyal/Trustworthy</a>  <!-- button counts for gold --> 
+	<a href="#four"  onclick="orangeAdd();" class="w3-button w3-carrot w3-round-xlarge">Adventurous/Confrontational</a>  <!-- button counts for orange --> 
 	
 </div><!-- end of question 3 -->
 
 <div class="page" id="four"> <!-- start of question 4 -->
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-black">
 		<h1> Question 4 </h1> <!--question 4 title -->
 	</div><!-- start of question 4 content -->
 	
 	<div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p> <!-- question 4 header --> 
-	<a href="#resultspage"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button counts for allergy and goes to results page --> 
-	<a href="#resultspage"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!-- no button counts for cold and goes to results page--> 
+		<p>In short, you are a ...</p> <!-- question 4 header --> 
+	<a href="#five"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Perfectionist</a>  <!-- button counts for green --> 
+	<a href="#five"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Inspiration</a>  <!-- button counts for blue --> 
+	<a href="#five"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Procedural individual</a>  <!-- button counts for gold --> 
+	<a href="#five"  onclick="orangeAdd();" class="w3-button w3-carrot w3-round-xlarge">Risk taker</a>  <!-- button counts for orange --> 
 	
 </div><!-- end of question 4 -->
+	
 
+<div class="page" id="five"> <!-- start of question 5 -->
+	<div class="w3-container w3-flat-black">
+		<h1> Question 5 </h1> <!--question 5 title -->
+	</div><!-- start of question 5 content -->
+	
+	<div id="content" class="w3-container">
+		<p>Which one of the below resonates the most to you ?</p> <!-- question 5 header --> 
+	<a href="#six"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Philosophical/Rational</a>  <!-- button counts for green --> 
+	<a href="#six"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Easy going/Sympathetic</a>  <!-- button counts for blue --> 
+	<a href="#six"  onclick="orangeAdd();" class="w3-button w3-carrot w3-round-xlarge">Lively</a>  <!-- button counts for orange --> 
+	<a href="#six"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Proud</a>  <!-- button counts for gold --> 
+	
+</div><!-- end of question 5 -->
 
-<div class="page" id="resultspage"> <!-- results page -->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1> <!-- header for results -->
+<div class="page" id="six"> <!-- start of question 6 -->
+	<div class="w3-container w3-flat-black">
+		<h1> Question 6 </h1> <!--question 6 title -->
+	</div><!-- start of question 6 content -->
+	
+	<div id="content" class="w3-container">
+		<p>Finally, what do you think your true color is ?</p> <!-- question 6 header --> 
+	<a href="#seven"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Green</a>  <!-- button counts for green --> 
+	<a href="#seven"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Blue</a>  <!-- button counts for blue --> 
+	<a href="#seven"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Gold</a>  <!-- button counts for gold --> 
+	<a href="#seven"  onclick="orangeAdd();" class="w3-button w3-carrot w3-round-xlarge">Orange</a>  <!-- button counts for orange --> 
+	
+</div><!-- end of question 6 -->
+
+<div class="page" id="seven"> <!-- results page -->
+	 <div id="header" class="w3-container w3-flat-black">
+		 <h1>What could it be ?</h1>  <!-- header for results -->
 	</div>
 	
 	<div id="content" class="w3-container">
+		<p><b><i>Final Result: What is your true color?</i></b></p>
 		<p id="results"></p>
-		<a onclick="resultscalculator();" class="w3-btn w3-grey w3-round"> Results </a> <!-- results button -->
-
-	</div> <!-- end of results page -->
+		<a href="#seven"  onclick="getresults();" class="w3-button w3-indigo w3-round-xlarge"> Click here to get your result</a> <!-- results button -->
+		<a href="#eight"  class="w3-button w3-carrot w3-round-xlarge">What is Orange?</a>  <!-- description for Orange -->
+		<a href="#nine"  class="w3-button w3-khaki w3-round-xlarge">What is Gold?</a>  <!-- description for Gold -->
+		<a href="#ten"   class="w3-button w3-blue w3-round-xlarge">What is Blue?</a>  <!-- description for Blue -->
+		<a href="#eleven"   class="w3-button w3-teal w3-round-xlarge">What is Green?</a>  <!-- description for Green -->
+	</div>
 </div>
 
 	
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+<footer class="w3-bottom w3-container w3-flat-black">
+	<p>The more you know! No matter the color, you are beautiful.</p>
 </footer>
 
 </body>
