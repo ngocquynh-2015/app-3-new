@@ -63,6 +63,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function greenAdd(){ //fucntion to count Green//
             green_count = green_count + 1;
+		
+	}
 	
 	function resultscalculator(){ //function for the results page
 	var resultText = document.getElementById("resultspage"); //variable for the results
@@ -70,7 +72,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var goldPercent = (gold_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Gold probability 
 	var bluePercent = (blue_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Blue probability
 	var greenPercent = (green_count / (orange_count + gold_count + blue_count + green_count)) * 100; //equation for Green probability
-	resultText.innerHTML = "Probability you are Orange =" + orangePercent + "<br> Probability you are Gold =" + goldPercent + "<br> Probability you are Blue =" + bluePercent + "<br> Probability you are Green =" + greenPercent;
+	resultText.innerHTML = "Probability your color is Orange =" + orangePercent + "%" + "<br> Probability your color is Gold =" + goldPercent + "%" + "<br> Probability your color is Blue =" + bluePercent + "%" + "<br> Probability your color is Green =" + greenPercent + "%";
+		
 	}
 
   </script>
@@ -109,9 +112,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<a href="#one" class="w3-button w3-indigo w3-round-xlarge"> Get Started </a> <!-- button on first page that leads to questions -->
 	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<img src="https://www.truecolorsintl.com/hubfs/pie.png" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="The Color Proportion Wheel">
+
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF PERSONALITY TYPE.</p> <!-- extra information on first page -->
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF PERSONALITY TYPE.</p> <!-- disclaimer -->
 	</div>
 
 <div class="page" id="one">  <!-- start of question 1 or page 2 -->
@@ -121,7 +127,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div> <!-- start of question 1 content -->
 	
     	<div id="content" class="w3-container">
-        <p> Which best describes you? Choose one : Spontaneous, Planned/Neat, Compassionate, Quiet</p> <!-- header for question 1 -->  
+        <p><b> Which best describes you? Choose one : Spontaneous, Planned/Neat, Compassionate, Quiet</b></p> <!-- header for question 1 -->  
 	<a href="#two"  onclick="orangeAdd();" class="w3-button w3-orange w3-round-xlarge">Spontaneous</a>  <!-- Spontaneous button counts for orange --> 
 	<a href="#two"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Planned/Neat</a>  <!-- planned/neat button counts for gold --> 
 	<a href="#two"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Compassionate</a>  <!-- compassionate button counts for blue --> 
@@ -130,12 +136,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div><!-- end of question 1 -->
 	
 <div class="page" id="two"> <!-- question 2 title --> 
-	<div class="w3-container w3-flat-black">
+	<div class="w3-container w3-black">
 		<h1>Question 2</h1> <!--question 2 title -->
 	</div> <!-- start of question 2 content --> 
 	
 	<div id="content" class="w3-container">
-		<p>Which is most like you? Choose one: Conceptual, Feelings/Caring, Orderly/On-time, Fun/Competitive</p> <!-- question 2 header --> 
+	<p><b>Which is most like you? Choose one: Conceptual, Feelings/Caring, Orderly/On-time, Fun/Competitive</b></p> <!-- question 2 header --> 
 	<a href="#three"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Conceptual</a>  <!-- conceptual button counts for green --> 
 	<a href="#three"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Feelings/Caring</a>  <!-- feelings/caring button counts for blue --> 
 	<a href="#three"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Orderly/On-time</a>  <!-- orderly/on-time button counts for gold --> 
@@ -144,12 +150,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div><!-- end of question 2 -->
 	
 <div class="page" id="three"> <!-- start of question 3 -->
-	<div class="w3-container w3-flat-black">
+	<div class="w3-container w3-black">
 		<h1> Question 3 </h1> <!--question 3 title -->
 	</div> <!-- start of question 3 content -->
 	
 	<div id="content" class="w3-container">
-		<p>Do you think of yourself as...?</p> <!-- question 3 header --> 
+		<p><b>Do you think of yourself as...?</b></p> <!-- question 3 header --> 
 	<a href="#four"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Theoretical</a>  <!-- button counts for green --> 
 	<a href="#four"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Kind/Warm</a>  <!-- button counts for blue --> 
 	<a href="#four"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Loyal/Trustworthy</a>  <!-- button counts for gold --> 
@@ -158,12 +164,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div><!-- end of question 3 -->
 
 <div class="page" id="four"> <!-- start of question 4 -->
-	<div class="w3-container w3-flat-black">
+	<div class="w3-container w3-black">
 		<h1> Question 4 </h1> <!--question 4 title -->
 	</div><!-- start of question 4 content -->
 	
 	<div id="content" class="w3-container">
-		<p>In short, you are a ...</p> <!-- question 4 header --> 
+		<p><b>In short, you are a ...</b></p> <!-- question 4 header --> 
 	<a href="#five"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Perfectionist</a>  <!-- button counts for green --> 
 	<a href="#five"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Inspiration</a>  <!-- button counts for blue --> 
 	<a href="#five"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Procedural individual</a>  <!-- button counts for gold --> 
@@ -173,12 +179,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 
 <div class="page" id="five"> <!-- start of question 5 -->
-	<div class="w3-container w3-flat-black">
+	<div class="w3-container w3-black">
 		<h1> Question 5 </h1> <!--question 5 title -->
 	</div><!-- start of question 5 content -->
 	
 	<div id="content" class="w3-container">
-		<p>Which one of the below resonates the most to you ?</p> <!-- question 5 header --> 
+		<p><b>Which one of the below resonates the most to you ?</b></p> <!-- question 5 header --> 
 	<a href="#six"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Philosophical/Rational</a>  <!-- button counts for green --> 
 	<a href="#six"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Easy going/Sympathetic</a>  <!-- button counts for blue --> 
 	<a href="#six"  onclick="orangeAdd();" class="w3-button w3-orange w3-round-xlarge">Lively</a>  <!-- button counts for orange --> 
@@ -187,37 +193,96 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div><!-- end of question 5 -->
 
 <div class="page" id="six"> <!-- start of question 6 -->
-	<div class="w3-container w3-flat-black">
+	<div class="w3-container w3-black">
 		<h1> Question 6 </h1> <!--question 6 title -->
 	</div><!-- start of question 6 content -->
 	
 	<div id="content" class="w3-container">
-		<p>Finally, what do you think your true color is ?</p> <!-- question 6 header --> 
+		<p><b>Finally, what do you think your true color is ?</b></p> <!-- question 6 header --> 
 	<a href="#seven"  onclick="greenAdd();" class="w3-button w3-teal w3-round-xlarge">Green</a>  <!-- button counts for green --> 
 	<a href="#seven"  onclick="blueAdd();" class="w3-button w3-blue w3-round-xlarge">Blue</a>  <!-- button counts for blue --> 
 	<a href="#seven"  onclick="goldAdd();" class="w3-button w3-khaki w3-round-xlarge">Gold</a>  <!-- button counts for gold --> 
-	<a href="#seven"  onclick="orangeAdd();" class="w3-button w3-carrot w3-round-xlarge">Orange</a>  <!-- button counts for orange --> 
+	<a href="#seven"  onclick="orangeAdd();" class="w3-button w3-orange w3-round-xlarge">Orange</a>  <!-- button counts for orange --> 
 	
 </div><!-- end of question 6 -->
 
 <div class="page" id="seven"> <!-- results page -->
-	 <div id="header" class="w3-container w3-flat-black">
+	 <div id="header" class="w3-container w3-black">
 		 <h1>What could it be ?</h1>  <!-- header for results -->
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p><b><i>Final Result: What is your true color?</i></b></p>
 		<p id="results"></p>
-		<a href="#seven"  onclick="getresults();" class="w3-button w3-indigo w3-round-xlarge"> Click here to get your result</a> <!-- results button -->
+		<a href="#seven"  onclick="resultscalculator();" class="w3-button w3-indigo w3-round-xlarge"> Click here to get your result</a> <!-- results button -->
+		
 		<a href="#eight"  class="w3-button w3-orange w3-round-xlarge">What is Orange?</a>  <!-- description for Orange -->
 		<a href="#nine"  class="w3-button w3-khaki w3-round-xlarge">What is Gold?</a>  <!-- description for Gold -->
 		<a href="#ten"   class="w3-button w3-blue w3-round-xlarge">What is Blue?</a>  <!-- description for Blue -->
-		<a href="#eleven"   class="w3-button w3-teal w3-round-xlarge">What is Green?</a>  <!-- description for Green -->
+		<a href="#eleven" class="w3-button w3-teal w3-round-xlarge">What is Green?</a>  <!-- description for Green -->
 	</div>
+	
+	
+<footer class="w3-bottom w3-container w3-black"> <!-- footer -->
+	<p>The more you know! No matter the color, you are beautiful.</p>
+</footer>
+	
+	
+<div class="page" id="eight"> <!-- Orange description page -->
+	<div class="w3-container w3-orange">
+		<h1> Orange </h1> <!-- title -->
+	</div><!-- Orange content -->
+	
+	<div id="content" class="w3-container">
+		<p><b><i> The Adventurer</b></i></p>
+		<img src="https://personalitylingo.com/wp-content/uploads/2013/07/Mover-SP-Orange-Personality-Style.png" alt="Mover Personality Style - Personality Lingo" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 383px; height: 124.475px; margin: 27.9125px 0px;">
+		<p>Those with Orange color personality strengths tend to be witty, spontaneous, generous, optimistic, eager and bold. They need fun, variety, stimulation and excitement. Freedom to act is also important to an Orange. Oranges have energy and like to bounce around to different projects or tasks. Charming and are the life of the party, Oranges are the uninhibited performers!</p> <!-- DESCRIPTION --> 
+		<a href="#seven"  class="w3-button w3-black w3-round-xlarge">Want to explore the other colors? Go back!</a>  <!-- button to go back to result page --> 
+</div>
+	
+	
+<div class="page" id="nine"> <!-- Gold description page -->
+	<div class="w3-container w3-khaki">
+		<h1> Gold </h1> <!-- title -->
+	</div><!-- Gold content -->
+	
+	<div id="content" class="w3-container">
+		<p><b><i> The Builder</i></b></p>
+		<img src="https://personalitylingo.com/wp-content/uploads/2013/07/Planner-word-cloud.png" alt="Planner Personality type" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 400px; height: 150px; margin: 19.4339px 0px;">
+		<p>Those with Gold color personality strengths tend to be loyal, dependable, organized, thorough, sensible, punctual and caring. They notice and remember facts, like directions and instructions, set deadlines and want them to be met. They enjoy check lists and checking things off the list! If your color is Gold, order, rules, respect, and dependability are important to you. Time is a key part of your life as well. </p> <!-- DESCRIPTION --> 
+		<a href="#seven"  class="w3-button w3-black w3-round-xlarge">Want to explore the other colors? Go back!</a>  <!-- button to go back to result page --> 
+</div>		
+
+<div class="page" id="ten"> <!-- Blue description page -->
+	<div class="w3-container w3-blue">
+		<h1> Blue </h1> <!-- title -->
+	</div><!-- Blue content -->
+	
+	<div id="content" class="w3-container">
+		<p><b><i> The Relator</i></b></p>
+		<img src="https://personalitylingo.com/wp-content/uploads/2013/07/Connector-NF-Blue-Word-Cloud-Hippo.png" alt="Relator Personality tyoe" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 383px; height: 124.475px; margin: 27.9125px 0px;">
+		<p>Those with Blue color personality strengths tend to be enthusiastic, sympathetic, communicative, compassionate, idealistic, sincere and imaginative. Someone with a blue personality tends to be calm and caring. If you have this personality type, you love to help and encourage others. As opposed to those with the Orange personality color, you are not impulsive or spontaneous - you always think before you speak and act and do everything at your own pace in your own time. You take time to process and share your feelings. Genuine and sincere, Blues are floating in a sea of tranquility!</p> <!-- DESCRIPTION --> 
+		<a href="#seven"  class="w3-button w3-black w3-round-xlarge">Want to explore the other colors? Go back!</a>  <!-- button to go back to result page --> 
+	</div>
+
+
+<div class="page" id="eleven"> <!-- Green description page -->
+	<div class="w3-container w3-teal">
+		<h1> Green </h1> <!-- title -->
+	</div><!-- Green content -->
+	
+	<div id="content" class="w3-container">
+		<p><b><i> The Planner</i></b></p>
+		<img src="https://personalitylingo.com/wp-content/uploads/2013/07/Thinker-NT-Green-Personality-Style-Hippo.png" alt="Thinker Personality Style - Personality Lingo" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 383px; height: 124.683px; margin: 27.8086px 0px;">
+		<p>Those with Green color personality strengths tend to be perfectionistic, analytical, conceptual, cool, calm, inventive and logical. They seek knowledge and understanding as well as always looking for explanations and answers. They are good listeners who would make sure to offer help whenever needed. Their ability to see the big picture helps them make correct decisions; however, they dislike details and prefer to leave details to someone else, which allows them to be efficient business owners! If your color is Green, you are known to be expressive and emotional, yet, not afraid to show it out!</p> <!-- DESCRIPTION --> 
+		<a href="#seven"  class="w3-button w3-black w3-round-xlarge">Want to explore the other colors? Go back!</a>  <!-- button to go back to result page --> 
+	</div>		
+	
+	
 </div>
 
 	
-<footer class="w3-bottom w3-container w3-flat-black">
+<footer class="w3-bottom w3-container w3-black">
 	<p>The more you know! No matter the color, you are beautiful.</p>
 </footer>
 
